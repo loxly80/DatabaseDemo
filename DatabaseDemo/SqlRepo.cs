@@ -34,5 +34,19 @@ namespace DatabaseDemo
       }
       return data;
     }
+
+    public void DeleteItem(string id)
+    {
+      using(SqlConnection connection = new SqlConnection(connectionString))
+      {
+        connection.Open();
+        using(SqlCommand command = connection.CreateCommand())
+        {
+          command.CommandText = $"delete from Demo where IdDemo={id}";
+          command.ExecuteNonQuery();
+        }
+        connection.Close();
+      }
+    }
   }
 }

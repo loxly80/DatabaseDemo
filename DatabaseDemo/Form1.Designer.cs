@@ -33,6 +33,7 @@
       this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
       this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
       this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+      this.BtnDelete = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // listView1
@@ -68,11 +69,22 @@
       // 
       this.columnHeader4.Text = "Col3";
       // 
+      // BtnDelete
+      // 
+      this.BtnDelete.Location = new System.Drawing.Point(677, 12);
+      this.BtnDelete.Name = "BtnDelete";
+      this.BtnDelete.Size = new System.Drawing.Size(132, 36);
+      this.BtnDelete.TabIndex = 1;
+      this.BtnDelete.Text = "Smazat";
+      this.BtnDelete.UseVisualStyleBackColor = true;
+      this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(800, 450);
+      this.ClientSize = new System.Drawing.Size(852, 450);
+      this.Controls.Add(this.BtnDelete);
       this.Controls.Add(this.listView1);
       this.Name = "Form1";
       this.Text = "Form1";
@@ -88,5 +100,6 @@
     private ColumnHeader columnHeader2;
     private ColumnHeader columnHeader3;
     private ColumnHeader columnHeader4;
+    private Button BtnDelete;
   }
 }
